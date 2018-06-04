@@ -119,7 +119,7 @@ namespace DataFileSplitter
             if (opts.testFraction > 0)
             {
                 Console.WriteLine($"test file: {tables[1].Count()} rows written to {testFilePath}");
-                outputLines = new ArrayList();
+                outputLines.Clear();
                 if (opts.includeHeader)
                 {
                     outputLines.Add(header);
@@ -132,7 +132,7 @@ namespace DataFileSplitter
             if (opts.devFraction > 0)
             {
                 Console.WriteLine($"dev file: {tables[2].Count()} rows written to {devFilePath}");
-                outputLines = new ArrayList();
+                outputLines.Clear();
                 if (opts.includeHeader)
                 {
                     outputLines.Add(header);

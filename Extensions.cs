@@ -32,11 +32,11 @@ namespace DataFileSplitter
                 }
             }
 
-            yield return list.GetRange(itemsReturned, trainCount);
-            yield return list.GetRange(itemsReturned, testCount);
+            yield return list.GetRange(0, trainCount);
+            yield return list.GetRange(trainCount, testCount);
             if (devCount>0)
             {
-                yield return list.GetRange(itemsReturned, devCount);
+                yield return list.GetRange(trainCount + testCount, devCount);
             }
         }
     }
